@@ -1,0 +1,38 @@
+#links{
+    padding: 40px 0px 40px 0px;
+    background-color: #303030;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+#links h1{
+    color: white;
+    font-size: 3rem;
+}
+
+#links p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#links a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    transition: transform 0.3s ease-out;
+
+}
+
+#link-container{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+}
