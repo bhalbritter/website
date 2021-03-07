@@ -16,6 +16,9 @@
     flex-direction: row;
     justify-content: center;
 }
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -113,7 +116,7 @@ button:hover > i {
     transform: translateY(9px);
 }
 
-@media (max-width: 700px){
+@media (max-width: 600px){
     #welcome-section > h1{
         font-size: 2rem;
     }

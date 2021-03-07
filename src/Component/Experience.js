@@ -36,7 +36,6 @@ const Experience = () =>  {
 
         const onScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight;
-
             if (div4Pos < scrollPos){
                 doShow((state) => ({...state, itemFour: true}));
             }else if (div4Pos > scrollPos) {
@@ -54,10 +53,6 @@ const Experience = () =>  {
             }else if (div2Pos < scrollPos) {
                 doShow((state) => ({...state, itemTwo: true}));
             }
-
-
-
-            //test
 
             if (div3Pos < scrollPos) {
                 doShow((state) => ({...state, itemThree: true}));
@@ -81,7 +76,8 @@ const Experience = () =>  {
     }, []);
 
     return (
-        <div className="mainContainer">
+        <div className="experienceContainer" id="experience">
+            <h1 id="title">Working experience</h1>
         <Div className="lineContainer"
              animate={show.itemThree}
              animatePercent={percentShowm.itemThree}
@@ -136,7 +132,6 @@ const Experience = () =>  {
 }
 
 const Div = styled.div`
-  height: 150px; 
   width: auto;
   transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
   transition: transform 2s;

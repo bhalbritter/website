@@ -6,15 +6,18 @@ import Links from './Links'
 import Footer from './Footer'
 import Graph from './Graph'
 import Experience from './Experience'
+import Timeline from './Timeline'
 import '../Stylesheets/Website.css'
+
 
 function App(){
     return(
-        <div class="Container">
-            <Header />
+        <div className="Container">
             <WelcomeSection />
-            <Graph />
+            <Header />
+            <Graph/>
             <Experience />
+            <Timeline />
             <Links />
             <Footer />
         </div>
