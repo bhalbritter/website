@@ -76,7 +76,7 @@ const Experience = () =>  {
     }, []);
 
     return (
-        <div className="experienceContainer" id="experience">
+        <div className="experienceContainer" name="experience">
             <h1 id="title">Working experience</h1>
         <Div className="lineContainer"
              animate={show.itemThree}

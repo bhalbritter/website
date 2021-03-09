@@ -53,11 +53,10 @@ const Header = () => {
     return(
         <div className="container">
         <div className={getNavClassNames()}  ref={ourRef} id="myTopnav">
-            <a href="#welcome-section"  className="active">Home</a>
-            <a to="test1">Overview</a>
-            <Link activeClass="active" className="test1" to="test1" spy={false} smooth={true} duration={100} >Test 1</Link>
-            <a href="#experience">Experience</a>
-            <a href="#project">Projects</a>
+            <Link activeClass="active" className="active" to="welcome-section" spy={false} smooth={true} duration={500} >Home</Link>
+            <Link activeClass="active" className="active" to="graph" spy={false} smooth={true} duration={500} >Overview</Link>
+            <Link activeClass="active" className="active" to="experience" spy={false} smooth={true} duration={500} >Experience</Link>
+            <Link activeClass="active" className="active" to="project" spy={false} smooth={true} duration={500} >Projects</Link>
             <a className="icon" onClick={myFunction}>&#9776;</a>
         </div>
             {show.isSticky ? <div id="playsholder"></div> :<div></div>}

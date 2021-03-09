@@ -2,7 +2,7 @@ import react from 'react'
 
 function Projects(){
     return(
-        <div id="#projects">
+        <div name="projects">
                 <h2>My current Projects</h2>
                 <div id="project-container">
                     <div className="project-tile">

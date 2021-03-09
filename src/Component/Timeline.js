@@ -16,9 +16,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default function BasicTimeline() {
     return (
-        <div className="mainDiv" id="project">
+        <div className="mainDiv" name="project">
             <h1 id="title">Projects</h1>
-            <p id="startTimeline">Late 2020 I get interested in Web-develpement</p>
+            <p id="startTimeline">Late 2020 I get interested in Web-development</p>
         <Timeline align="alternate" className="myTimeline" >
             <TimelineItem>
                 <TimelineOppositeContent>

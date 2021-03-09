@@ -361,7 +361,7 @@ const Graph: React.FC = () => {
     }
 
     return (
-        <div className="container2"  id="graph" name="test1">
+        <div className="container2"  id="graph" name="graph">
             <h1 id="title"  ref={ourRef} >Overview </h1>
             <ReactECharts
                           className="diagram"
