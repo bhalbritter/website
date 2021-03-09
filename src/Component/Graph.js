@@ -92,7 +92,7 @@ const Graph: React.FC = () => {
                     category: 2
                 },{
                     id: "3",
-                    name: "Spare Time",
+                    name: "Spare time",
                     symbolSize: 65,
                     x: -120,
                     y: 0,
@@ -212,7 +212,7 @@ const Graph: React.FC = () => {
                     category: 3
                 },{
                     id: "18",
-                    name: "travel",
+                    name: "Travel",
                     symbolSize: 40,
                     x: -230,
                     y: 30,
@@ -361,8 +361,8 @@ const Graph: React.FC = () => {
     }
 
     return (
-        <div className="container2"  id="graph"  >
-            <h1 id="title"  ref={ourRef}>Overview</h1>
+        <div className="container2"  id="graph" name="test1">
+            <h1 id="title"  ref={ourRef} >Overview </h1>
             <ReactECharts
                           className="diagram"
                           option={option}

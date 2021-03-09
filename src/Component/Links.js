@@ -1,4 +1,7 @@
 import react from 'react'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Email from '@material-ui/icons/Email';
 import '../Stylesheets/Links.css'
 
 function Links(){
@@ -8,23 +11,20 @@ function Links(){
             <p>How do you take your coffee</p>
             <div id="link-container">
                 <a
-                    href="https://facebook.com/freecodecamp"
                     target="_blank"
+                    href="https://www.linkedin.com/in/benedikt-halbritter-264a73204/"
                     className="btn contact-details"
-                ><i className="fab fa-facebook-square"></i> Facebook</a
+                ><LinkedInIcon /> LinkedIn</a
                 >
                 <a
                     id="profile-link"
-                    href="https://github.com/freecodecamp"
+                    href="https://github.com/bhalbritter"
                     target="_blank"
                     className="btn contact-details"
-                ><i className="fab fa-github"></i> GitHub</a
+                ><GitHubIcon id="GitIcon" /> GitHub</a
                 >
-                <a href="mailto:example@example.com" className="btn contact-details"
-                ><i className="fas fa-at"></i> Send a mail</a
-                >
-                <a href="tel:555-555-5555" className="btn contact-details"
-                ><i className="fas fa-mobile-alt"></i> Call me</a
+                <a target="_blank" href="mailto:mail@benedikt-halbritter.de" className="btn contact-details"
+                ><Email /> Send a mail</a
                 >
             </div>
         </div>

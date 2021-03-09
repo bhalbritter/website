@@ -9,8 +9,8 @@ import Experience from './Experience'
 import Timeline from './Timeline'
 import '../Stylesheets/Website.css'
 
-
 function App(){
+
     return(
         <div className="Container">
             <WelcomeSection />

@@ -83,48 +83,56 @@ const Experience = () =>  {
              animatePercent={percentShowm.itemThree}
              ref={refThree}>
             <div id="container1"></div>
-            <div className="frontDiv">
-                Since 05/20
+            <div className="myDiv">
+            <div className="titleDiv">
+                <strong> Since 05/20 </strong>
             </div>
-            <div className="backDiv">
+            <div className="contentDiv">
                 <strong>Working Student at Krones AG</strong>
                 <p>responsibilitys: development and implementation of applications for processes in the purchasing process</p>
+            </div>
             </div>
         </Div>
         <Div className="lineContainer"
              animate={show.itemTwo}
              ref={anotherRef}>
                 <div id="container2"></div>
-                <div className="frontDiv">
-                    Since 10/19
+                <div className="myDiv">
+                <div className="titleDiv">
+                    <strong>Since 10/19</strong>
                 </div>
-                <div className="backDiv" >
+                <div className="contentDiv" >
                     <strong>Student at Ostbayerische Technische Hochschule Regensburg </strong>
                     <p>Field of study: Computer Science</p>
-
+                </div>
                 </div>
         </Div>
         <Div className="lineContainer"
                  animate={show.itemOne}
                  ref={ourRef}>
                 <div id="container3"></div>
-                <div className="frontDiv">
-                     02/18 <br></br>till 08/18
-                </div>
-                <div className="backDiv" >
+                <div className="myDiv">
+                    <div className="titleDiv">
+                     <strong>02/18 <br></br>till <br></br>08/18</strong>
+                    </div>
+                    <div className="contentDiv">
                     <strong>Internship at BFFT Fahrzeugtechnik (today EDAG Group)</strong>
                     <p>responsible for developing an application for processing log data from test drives</p>
+                    </div>
                 </div>
         </Div>
             <Div className="lineContainer"
                  animate={show.itemFour}
                  ref={refFour}>
                 <div id="container4"></div>
-                <div className="frontDiv">
-                    09/15 <br></br>till 08/18
+                <div className="myDiv">
+                <div className="titleDiv">
+                    <strong> 09/15 <br></br>till <br></br> 08/18 </strong>
                 </div>
-                <div className="backDiv" >
+                <div className="contentDiv" >
                     <strong>Apprenticeship at EDV Schulen des Landkreises Deggendorf</strong>
+                    <p>apprenticeship title: Computer Science Expert Subject Area: Software Developement</p>
+                </div>
                 </div>
             </Div>
         </div>

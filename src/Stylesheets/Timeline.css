@@ -19,13 +19,19 @@
     text-align: center;
 }
 
-.EatNode {
+.Node {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
     background-color: #303030;
     color: white;
-}
-
-.connector {
-    height: 800px;
+    width: 100%;
+    alignment: right;
+    box-shadow: 5px 10px 5px 5px #1f2123;
+    border-radius: 10px;
+    text-align: center;
 }
 
 #firstConnector{
@@ -34,13 +40,6 @@
 
 .oppositeContent{
     color: white;
-}
-.leftNode {
-    width: 100%;
-    alignment: right;
-    box-shadow: 5px 10px 5px 5px #1f2123;
-    border-radius: 10px;
-    text-align: center;
 }
 
 #githubButtons{
@@ -58,27 +57,51 @@
 
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width: 1200px) {
+
     .connector {
-        height: 400px;
+        height: 800px;
     }
 
-    .leftNode {
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .Node {
         text-align: left;
         width: 100%;
+        font-size: 12px;
+    }
+
+    .Node strong {
+        font-size: 14px;
     }
 
     .picture{
         display: none;
     }
 
-    #githubButtons{
-        margin: 0px;
-        width: 100%;
-
-    }
     #firstConnector{
         height: 100px;
+    }
+
+    #githubButtons{
+    font-size: 10px;
+    height: 30px;
+    margin: 3px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .Node {
+        text-align: left;
+        width: 100%;
+        font-size: 11px;
+        margin: 0px;
     }
 
 }

@@ -1,5 +1,6 @@
 import react, {useRef, useState,useLayoutEffect} from 'react'
 import '../Stylesheets/Header.css'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Header = () => {
 
@@ -52,8 +53,9 @@ const Header = () => {
     return(
         <div className="container">
         <div className={getNavClassNames()}  ref={ourRef} id="myTopnav">
-            <a href="#welcome-section" className="active">Home</a>
-            <a href="#graph">Overview</a>
+            <a href="#welcome-section"  className="active">Home</a>
+            <a to="test1">Overview</a>
+            <Link activeClass="active" className="test1" to="test1" spy={false} smooth={true} duration={100} >Test 1</Link>
             <a href="#experience">Experience</a>
             <a href="#project">Projects</a>
             <a className="icon" onClick={myFunction}>&#9776;</a>

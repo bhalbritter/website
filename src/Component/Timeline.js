@@ -18,20 +18,17 @@ export default function BasicTimeline() {
     return (
         <div className="mainDiv" id="project">
             <h1 id="title">Projects</h1>
-            <p1 id="startTimeline">Late 2020 I get interested in Web-develpement</p1>
+            <p id="startTimeline">Late 2020 I get interested in Web-develpement</p>
         <Timeline align="alternate" className="myTimeline" >
             <TimelineItem>
                 <TimelineOppositeContent>
                     <Typography variant="body2" className="oppositeContent" >
-
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-
                     <TimelineConnector  className="connector" style={{backgroundColor: "#be3144"}} id="firstConnector"/>
                 </TimelineSeparator>
                 <TimelineContent>
-
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
@@ -45,12 +42,12 @@ export default function BasicTimeline() {
                     <TimelineConnector  className="connector" style={{backgroundColor: "#be3144"}}/>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <div className="EatNode leftNode">
+                    <div className="Node">
                         <strong>Release of this website</strong>
                         <img src={website} alt="website_pic" className="picture"/>
                         <p>This website is the start of my web portfolio and the goal is to inform you about my interests, my experiences and the projects I am working on.
                             It was implemented with React and uses Echarts. It supports normal desktop and mobile devices.</p>
-                        <Button variant="contained" id="githubButtons">
+                        <Button target="_blank" variant="contained" id="githubButtons" href="https://github.com/bhalbritter/website">
                             <GitHubIcon ></GitHubIcon>Lern more
                         </Button>
                     </div>
@@ -67,12 +64,12 @@ export default function BasicTimeline() {
                     <TimelineConnector  className="connector" style={{backgroundColor: "#be3144"}} />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <div className="EatNode leftNode" >
+                    <div className="Node" >
                         <strong>Satisfactory Builder</strong>
                         <img src={saCalc} alt="saCalc_pic" className="picture"/>
                         <p>The Satisfactory Builder is an online tool that can be used to plan Satisfactory's complex production chains.</p>
                         <p>It is implemented with React-Flow and the goal is to release a prototype soon.</p>
-                        <Button variant="contained" id="githubButtons">
+                        <Button target="_blank" variant="contained" id="githubButtons" href="https://github.com/bhalbritter/sacalculator">
                             <GitHubIcon ></GitHubIcon>Lern more
                         </Button>
                     </div>
@@ -88,7 +85,7 @@ export default function BasicTimeline() {
                     <TimelineDot />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <div className="EatNode leftNode" >
+                    <div className="Node" >
                         <strong>More is coming soon</strong>
                         <p>More Projects will follow in the future, the long term goal is to improve my skills this way and get used to certain technologies</p>
                     </div>
