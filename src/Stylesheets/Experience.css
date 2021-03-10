@@ -31,7 +31,7 @@
     width: 100%;
     box-shadow: 5px 10px 5px 5px  #1f2123;
     border-left: 1px solid #be3144;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 40px 0 0 40px;
 }
 
 .titleDiv{
@@ -50,7 +50,7 @@
     display:block;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 
     .lineContainer {
         font-size: 12px;

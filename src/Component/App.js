@@ -9,18 +9,20 @@ import Experience from './Experience'
 import Timeline from './Timeline'
 import '../Stylesheets/Website.css'
 
+
 function App(){
 
     return(
-        <div className="Container">
-            <WelcomeSection />
-            <Header />
-            <Graph/>
-            <Experience />
-            <Timeline />
-            <Links />
-            <Footer />
-        </div>
+                <div className="Container">
+                    <WelcomeSection />
+                    <Header />
+                    <Graph/>
+                    <Experience />
+                    <Timeline />
+                    <Links />
+                    <Footer />
+                </div>
+
     )
 }
 

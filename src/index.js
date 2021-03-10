@@ -5,4 +5,5 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 smoothscroll.polyfill();
 
+
 ReactDOM.render(<App />, document.getElementById("root"))

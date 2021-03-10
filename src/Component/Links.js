@@ -8,7 +8,6 @@ function Links(){
     return(
         <div id="links">
             <h1>Let's work together...</h1>
-            <p>How do you take your coffee</p>
             <div id="link-container">
                 <a
                     target="_blank"

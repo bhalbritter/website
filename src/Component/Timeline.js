@@ -34,7 +34,7 @@ export default function BasicTimeline() {
             <TimelineItem>
                 <TimelineOppositeContent>
                     <Typography variant="body2" className="oppositeContent" >
-                        TODO realease datum eintragen
+                        10.03.2021
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>

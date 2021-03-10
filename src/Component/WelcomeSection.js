@@ -1,8 +1,26 @@
-import react from 'react'
+import react,{useRef, useState,useLayoutEffect} from 'react'
 import Button from '@material-ui/core/Button';
 import '../Stylesheets/WelcomeSection.css'
 
 function WelcomeSection(){
+
+    useLayoutEffect(() => {
+
+    const convertStyle = () => {
+        const height = window.innerHeight;
+        let width = window.innerWidth;
+        let element = document.getElementById("welcome-section")
+        if (width >= 900) {
+            element.style.height = `${height - 50}px`;
+        }else{
+            element.style.height = `${height}px`;
+        }
+    };
+    window.addEventListener("resize", convertStyle, {passive: true});
+    window.addEventListener("DOMContentLoaded", convertStyle, {passive: true});
+
+    }, []);
+
     return(
         <div id= "welcome-section" name="welcome-section">
         <h1>Hey, I am Benedikt</h1>

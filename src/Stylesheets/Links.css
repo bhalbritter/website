@@ -1,5 +1,5 @@
 #links{
-    padding: 40px 0px 40px 0px;
+    padding: 40px 0 40px 0;
     background-color: #303030;
     display: flex;
     height: 10%;
@@ -46,5 +46,4 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
-
 }
