@@ -7,21 +7,24 @@
     height: 185px;
 }
 
-#container1{
+#container1 {
     width: 10%;
 }
-#container2{
+
+#container2 {
     width: 20%;
 }
-#container3{
+
+#container3 {
     width: 30%;
 }
-#container4{
+
+#container4 {
     width: 40%;
 }
 
 
-.myDiv{
+.myDiv {
     border-top: 1px solid #be3144;
     border-bottom: 1px solid #be3144;
     display: flex;
@@ -29,17 +32,17 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    box-shadow: 5px 10px 5px 5px  #1f2123;
+    box-shadow: 5px 10px 5px 5px #1f2123;
     border-left: 1px solid #be3144;
     border-radius: 40px 0 0 40px;
 }
 
-.titleDiv{
+.titleDiv {
     padding-right: 20px;
     padding-left: 10px;
 }
 
-.experienceContainer{
+.experienceContainer {
     width: 100%;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
@@ -47,7 +50,7 @@
 .experienceContainer:before {
     height: 54px;
     content: "";
-    display:block;
+    display: block;
 }
 
 @media screen and (max-width: 900px) {
@@ -57,7 +60,7 @@
         height: 95px;
     }
 
-    .myDiv{
-        box-shadow: 3px 5px 5px 5px  #1f2123;
+    .myDiv {
+        box-shadow: 3px 5px 5px 5px #1f2123;
     }
 }

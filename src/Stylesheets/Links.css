@@ -37,6 +37,10 @@
     padding-top: 20px;
 }
 
+#links a:hover {
+    transform: translateY(5px);
+}
+
 #GitIcon{
     margin: 5px;
 }
@@ -46,4 +50,19 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+}
+
+@media (max-width: 600px) {
+    #welcome-section > h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section > p {
+        font-size: 2rem;
+    }
+
+    #links h1 {
+        font-size: 2rem;
+    }
+
 }

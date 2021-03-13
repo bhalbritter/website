@@ -1,7 +1,6 @@
-import react,{useRef, useState,useLayoutEffect} from 'react';
+import {useLayoutEffect, useRef, useState} from 'react';
 import ReactECharts from 'echarts-for-react';
 import cloneDeep from 'lodash.clonedeep';
-import echarts from 'echarts';
 import '../Stylesheets/Graph.css'
 
 const Graph: React.FC = () => {
@@ -12,14 +11,15 @@ const Graph: React.FC = () => {
 
     const ourRef = useRef(null);
 
+    // this hook decides when to load the graphic based on the scroll pos of the user
     useLayoutEffect(() => {
 
-        const topPos = (element) =>  element.getBoundingClientRect().top - element.getBoundingClientRect().height*4;
+        const topPos = (element) => element.getBoundingClientRect().top - element.getBoundingClientRect().height * 4;
         const getHeight = (element) => element.offsetHeight;
         const navbarPos = topPos(ourRef.current);
         const onScroll = () => {
             const scrollPos = window.pageYOffset;
-            if (navbarPos  < scrollPos){
+            if (navbarPos < scrollPos) {
                 loadGraph();
             }
         };
@@ -28,7 +28,7 @@ const Graph: React.FC = () => {
 
     }, []);
 
-
+    // options for the graph
     const options = {
 
         title: {
@@ -44,15 +44,15 @@ const Graph: React.FC = () => {
             max: 3
         },
         legend: {
-          selected:{
-              "Interests": false,
-              "Programming": false,
-              "Sports": false,
-              "Spare Time": false
-          },
-          textStyle: {
-              color: "#fff"
-          }
+            selected: {
+                "Interests": false,
+                "Programming": false,
+                "Sports": false,
+                "Spare Time": false
+            },
+            textStyle: {
+                color: "#fff"
+            }
         },
 
         animation: true,
@@ -60,8 +60,10 @@ const Graph: React.FC = () => {
         animationEasing: "quinticInOut",
         animationEasingUpdate: "quinticInOut",
         series: [{
-            label: {show: true,
-            overflow: "show"} ,
+            label: {
+                show: true,
+                overflow: "show"
+            },
             name: "Les Miserables",
             type: "graph",
             layout: "none",
@@ -74,14 +76,14 @@ const Graph: React.FC = () => {
                 value: 28.685715,
                 category: 0
             }, {
-                    id: "1",
-                    name: "Programming",
-                    symbolSize: 80,
-                    x: 115,
-                    y: -75,
-                    value: 28.685715,
-                    category: 1
-                },
+                id: "1",
+                name: "Programming",
+                symbolSize: 80,
+                x: 115,
+                y: -75,
+                value: 28.685715,
+                category: 1
+            },
                 {
                     id: "2",
                     name: "Sports",
@@ -90,7 +92,7 @@ const Graph: React.FC = () => {
                     y: 150,
                     value: 28.685715,
                     category: 2
-                },{
+                }, {
                     id: "3",
                     name: "Spare time",
                     symbolSize: 65,
@@ -138,7 +140,7 @@ const Graph: React.FC = () => {
                     y: -170,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "9",
                     name: "Algorithms",
                     symbolSize: 65,
@@ -146,7 +148,7 @@ const Graph: React.FC = () => {
                     y: -110,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "10",
                     name: "Database",
                     symbolSize: 55,
@@ -154,7 +156,7 @@ const Graph: React.FC = () => {
                     y: 15,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "11",
                     name: "PlSQL",
                     symbolSize: 45,
@@ -162,7 +164,7 @@ const Graph: React.FC = () => {
                     y: 100,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "12",
                     name: "Web",
                     symbolSize: 40,
@@ -170,7 +172,7 @@ const Graph: React.FC = () => {
                     y: -150,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "13",
                     name: "React",
                     symbolSize: 35,
@@ -178,7 +180,7 @@ const Graph: React.FC = () => {
                     y: -190,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "14",
                     name: "Javascript",
                     symbolSize: 60,
@@ -186,7 +188,7 @@ const Graph: React.FC = () => {
                     y: -170,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "15",
                     name: "Html",
                     symbolSize: 40,
@@ -194,7 +196,7 @@ const Graph: React.FC = () => {
                     y: -80,
                     value: 28.685715,
                     category: 1
-                },{
+                }, {
                     id: "16",
                     name: "Cars",
                     symbolSize: 30,
@@ -202,7 +204,7 @@ const Graph: React.FC = () => {
                     y: -92,
                     value: 28.685715,
                     category: 3
-                },{
+                }, {
                     id: "17",
                     name: "Cooking",
                     symbolSize: 50,
@@ -210,7 +212,7 @@ const Graph: React.FC = () => {
                     y: 120,
                     value: 28.685715,
                     category: 3
-                },{
+                }, {
                     id: "18",
                     name: "Travel",
                     symbolSize: 40,
@@ -218,7 +220,7 @@ const Graph: React.FC = () => {
                     y: 30,
                     value: 28.685715,
                     category: 3
-                },{
+                }, {
                     id: "19",
                     name: "Long\nterm\ninvesting",
                     symbolSize: 60,
@@ -232,74 +234,74 @@ const Graph: React.FC = () => {
                 source: "0",
                 target: "1"
             }, {
-                    id: "1",
-                    source: "0",
-                    target: "2"
-                },{
+                id: "1",
+                source: "0",
+                target: "2"
+            }, {
                 id: "2",
                 source: "0",
                 target: "3"
-            },{
+            }, {
                 id: "3",
                 source: "2",
                 target: "4"
-            },{
+            }, {
                 id: "4",
                 source: "2",
                 target: "5"
-            },{
+            }, {
                 id: "5",
                 source: "2",
                 target: "6"
-            },{
+            }, {
                 id: "6",
                 source: "1",
                 target: "7"
-            },{
+            }, {
                 id: "7",
                 source: "1",
                 target: "8"
-            },{
+            }, {
                 id: "8",
                 source: "1",
                 target: "9"
-            },{
+            }, {
                 id: "9",
                 source: "1",
                 target: "10"
-            },{
+            }, {
                 id: "9",
                 source: "10",
                 target: "11"
-            },{
+            }, {
                 id: "10",
                 source: "1",
                 target: "12"
-            },{
+            }, {
                 id: "11",
                 source: "12",
                 target: "13"
-            },{
+            }, {
                 id: "12",
                 source: "12",
                 target: "14"
-            },{
+            }, {
                 id: "13",
                 source: "12",
                 target: "15"
-            },{
+            }, {
                 id: "14",
                 source: "3",
                 target: "16"
-            },{
+            }, {
                 id: "15",
                 source: "3",
                 target: "17"
-            },{
+            }, {
                 id: "16",
                 source: "3",
                 target: "18"
-            },{
+            }, {
                 id: "17",
                 source: "3",
                 target: "19"
@@ -323,50 +325,52 @@ const Graph: React.FC = () => {
     const [option, setOption] = useState(options);
 
     let loaded = false;
-    function loadGraph(){
 
-        if(!loaded){
-        loaded = true;
-        let newOption;
+    // loads the categories one by one after a delay => result is a neat little Animation
+    function loadGraph() {
+
+        if (!loaded) {
+            loaded = true;
+            let newOption;
 
             newOption = cloneDeep(options);
             newOption.legend.selected["Interests"] = true;
             setOption(newOption);
 
-        setTimeout(function() {
-            newOption = cloneDeep(options);
-            newOption.legend.selected["Interests"] = true;
-            newOption.legend.selected["Programming"] = true;
-            setOption(newOption);
-        }, 1000);
+            setTimeout(function () {
+                newOption = cloneDeep(options);
+                newOption.legend.selected["Interests"] = true;
+                newOption.legend.selected["Programming"] = true;
+                setOption(newOption);
+            }, 1000);
 
-        setTimeout(function() {
-            newOption = cloneDeep(options);
-            newOption.legend.selected["Interests"] = true;
-            newOption.legend.selected["Programming"] = true;
-            newOption.legend.selected["Sports"] = true;
-            setOption(newOption);
-        }, 2000);
+            setTimeout(function () {
+                newOption = cloneDeep(options);
+                newOption.legend.selected["Interests"] = true;
+                newOption.legend.selected["Programming"] = true;
+                newOption.legend.selected["Sports"] = true;
+                setOption(newOption);
+            }, 2000);
 
-        setTimeout(function() {
-            newOption = cloneDeep(options);
-            newOption.legend.selected["Interests"] = true;
-            newOption.legend.selected["Programming"] = true;
-            newOption.legend.selected["Sports"] = true;
-            newOption.legend.selected["Spare Time"] = true;
-            setOption(newOption);
-        }, 3000);
+            setTimeout(function () {
+                newOption = cloneDeep(options);
+                newOption.legend.selected["Interests"] = true;
+                newOption.legend.selected["Programming"] = true;
+                newOption.legend.selected["Sports"] = true;
+                newOption.legend.selected["Spare Time"] = true;
+                setOption(newOption);
+            }, 3000);
 
         }
     }
 
     return (
-        <div className="container2"  id="graph" name="graph">
-            <h1 id="title"  ref={ourRef} >Overview </h1>
+        <div className="container2" id="graph" name="graph">
+            <h1 id="title" ref={ourRef}>Overview </h1>
             <ReactECharts
-                          className="diagram"
-                          option={option}
-                          style={{height: '90%'}}
+                className="diagram"
+                option={option}
+                style={{height: '90%'}}
             />
         </div>
 
