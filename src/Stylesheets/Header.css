@@ -69,6 +69,12 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    #playsholder {
+        height: 0;
+        background-color: #303030;
+    }
+
     .topnav.responsive {
         position: relative;
     }
