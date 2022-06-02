@@ -10,7 +10,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Typography from '@material-ui/core/Typography';
 import '../Stylesheets/Timeline.css';
 import website from '../Images/mywebsite.png'
-import saCalc from '../Images/imgsacalc.png'
+import pty from '../Images/pty.png'
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default function BasicTimeline() {
@@ -68,14 +68,13 @@ export default function BasicTimeline() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <div className="Node">
-                            <strong>Satisfactory Builder</strong>
-                            <img src={saCalc} alt="saCalc_pic" className="picture"/>
-                            <p>The Satisfactory Builder is an online tool that can be used to plan Satisfactory's
-                                complex production chains.</p>
-                            <p>It is implemented with React-Flow and the goal is to release a prototype soon.</p>
-                            <Button target="_blank" variant="contained" id="githubButtons"
-                                    href="https://github.com/bhalbritter/sacalculator">
-                                <GitHubIcon></GitHubIcon>Lern more
+                            <strong>PtySpark</strong>
+                            <img src={pty} alt="saCalc_pic" className="picture"/>
+                            <p>I have been working on our idea with 5 others since the summer of 2021. With this app we want to bring people together and offer them the best party experience. </p>
+                            <p>The app is currently in development but will be available soon.</p>
+                            <Button target="_blank" variant="contained" id="ptyButtons"
+                                    href="https://ptyspark.com">
+                                Lern more
                             </Button>
                         </div>
                     </TimelineContent>

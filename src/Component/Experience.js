@@ -8,23 +8,32 @@ const Experience = () => {
         itemOne: false,
         itemTwo: false,
         itemThree: false,
-        itemFour: false
+        itemFour: false,
+        itemFive: false,
+        itemSix: false,
+        itemSeven: false
     });
 
-    let div1Pos, div2Pos, div3Pos, div4Pos;
+    let div1Pos, div2Pos, div3Pos, div4Pos, div5Pos, div6Pos, div7Pos;
 
     //how much
     const [percentShowm, setPercentShow] = useState({
         itemOne: 0,
         itemTwo: 0,
         itemThree: 0,
-        itemFour: 0
+        itemFour: 0,
+        itemFive: 0,
+        itemSix: 0,
+        itemSeven: 0,
     });
 
-    const ourRef = useRef(null),
-        anotherRef = useRef(null),
+    const refOne = useRef(null),
+        refTwo = useRef(null),
         refThree = useRef(null),
-        refFour = useRef(null);
+        refFour = useRef(null),
+        refFive = useRef(null),
+        refSix = useRef(null),
+        refSeven = useRef(null);
 
     // this hook is important to ajust the positions of the divs when a resize occours
     useLayoutEffect(() => {
@@ -32,10 +41,13 @@ const Experience = () => {
             const topPos = (element) => element.getBoundingClientRect().top + window.scrollY - window.innerHeight;
             const getHeight = (element) => element.offsetHeight;
 
-            div1Pos = topPos(ourRef.current)
-            div2Pos = topPos(anotherRef.current)
+            div1Pos = topPos(refOne.current)
+            div2Pos = topPos(refTwo.current)
             div3Pos = topPos(refThree.current)
             div4Pos = topPos(refFour.current)
+            div5Pos = topPos(refFive.current)
+            div6Pos = topPos(refSix.current)
+            div7Pos = topPos(refSeven.current)
         };
         window.addEventListener("resize", convertStyle, {passive: true});
     }, []);
@@ -45,10 +57,13 @@ const Experience = () => {
         const topPos = (element) => element.getBoundingClientRect().top + window.scrollY;
         const getHeight = (element) => element.offsetHeight;
 
-        div1Pos = topPos(ourRef.current)
-        div2Pos = topPos(anotherRef.current)
+        div1Pos = topPos(refOne.current)
+        div2Pos = topPos(refTwo.current)
         div3Pos = topPos(refThree.current)
         div4Pos = topPos(refFour.current)
+        div5Pos = topPos(refFive.current)
+        div6Pos = topPos(refSix.current)
+        div7Pos = topPos(refSeven.current)
 
         const div3Height = getHeight(refThree.current);
 
@@ -66,6 +81,25 @@ const Experience = () => {
             } else if (div1Pos < scrollPos) {
                 doShow((state) => ({...state, itemOne: true}));
             }
+
+            if (div5Pos > scrollPos) {
+                doShow((state) => ({...state, itemFive: false}));
+            } else if (div5Pos < scrollPos) {
+                doShow((state) => ({...state, itemFive: true}));
+            }
+
+            if (div6Pos > scrollPos) {
+                doShow((state) => ({...state, itemSix: false}));
+            } else if (div6Pos < scrollPos) {
+                doShow((state) => ({...state, itemSix: true}));
+            }
+
+            if (div7Pos > scrollPos) {
+                doShow((state) => ({...state, itemSeven: false}));
+            } else if (div7Pos < scrollPos) {
+                doShow((state) => ({...state, itemSeven: true}));
+            }
+
 
             if (div2Pos > scrollPos) {
                 doShow((state) => ({...state, itemTwo: false}));
@@ -96,13 +130,58 @@ const Experience = () => {
         <div className="experienceContainer" name="experience">
             <h1 id="title">Working experience</h1>
             <Div className="lineContainer"
+                 animate={show.itemSeven}
+                 animatePercent={percentShowm.itemSeven}
+                 ref={refSeven}>
+                <div id="container7"></div>
+                <div className="myDiv">
+                    <div className="titleDiv">
+                        <strong> Since 06/22 </strong>
+                    </div>
+                    <div className="contentDiv">
+                        <strong>Co-Founder: PtySpark UG (haftungsbeschränkt)</strong>
+                        <p>goal: Bring people together with the help of an app and at the same time find them the right event</p>
+                    </div>
+                </div>
+            </Div>
+            <Div className="lineContainer"
+                 animate={show.itemSix}
+                 animatePercent={percentShowm.itemSix}
+                 ref={refSix}>
+                <div id="container6"></div>
+                <div className="myDiv">
+                    <div className="titleDiv">
+                        <strong> Since  03/22  </strong>
+                    </div>
+                    <div className="contentDiv">
+                        <strong>Working Student at ASAP Group</strong>
+                        <p>responsibilitys: Further development of a system for intelligent detection of signs and traffic lights in road traffic </p>
+                    </div>
+                </div>
+            </Div>
+            <Div className="lineContainer"
+                 animate={show.itemFive}
+                 animatePercent={percentShowm.itemFive}
+                 ref={refFive}>
+                <div id="container5"></div>
+                <div className="myDiv">
+                    <div className="titleDiv">
+                        <strong> 10/21 <br></br>till <br></br> 02/22 </strong>
+                    </div>
+                    <div className="contentDiv">
+                        <strong>Internship at ASAP Group</strong>
+                        <p>responsibilitys: Further development of a React-based editor</p>
+                    </div>
+                </div>
+            </Div>
+            <Div className="lineContainer"
                  animate={show.itemThree}
                  animatePercent={percentShowm.itemThree}
                  ref={refThree}>
                 <div id="container1"></div>
                 <div className="myDiv">
                     <div className="titleDiv">
-                        <strong> Since 05/20 </strong>
+                        <strong> 05/20 <br></br>till <br></br> 09/21 </strong>
                     </div>
                     <div className="contentDiv">
                         <strong>Working Student at Krones AG</strong>
@@ -113,7 +192,7 @@ const Experience = () => {
             </Div>
             <Div className="lineContainer"
                  animate={show.itemTwo}
-                 ref={anotherRef}>
+                 ref={refTwo}>
                 <div id="container2"></div>
                 <div className="myDiv">
                     <div className="titleDiv">
@@ -127,7 +206,7 @@ const Experience = () => {
             </Div>
             <Div className="lineContainer"
                  animate={show.itemOne}
-                 ref={ourRef}>
+                 ref={refOne}>
                 <div id="container3"></div>
                 <div className="myDiv">
                     <div className="titleDiv">
